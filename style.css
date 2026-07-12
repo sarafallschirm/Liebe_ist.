@@ -1,13 +1,14 @@
 body{
   background-color: #1a2a3a;
   color: #f7f4eb;
-  font-family: "Futura Bold";
+  font-family: "Futura", sans-serif;
   display:flex;
   align-items:center;
 }
 
 h1{
   color: #dca842;
-  font-size: 4;
-  margin bottom: 5px;
+  font-size: 4rem;
+  margin-bottom: 5px;
+  text-shadow: 3px 3px 0px #b23b28;
 }

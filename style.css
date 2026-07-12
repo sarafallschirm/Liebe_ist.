@@ -66,21 +66,22 @@ h1 {
 
 
 .back-link {
-    
+    color: #f7f4eb;
     text-decoration: none;
     font-size: 0.9rem;
     opacity: 0.6;
     transition: opacity 0.3s, color 0.3s;
     display: inline-flex; 
     align-items: center;  
-    gap: 8px;             
+    gap: 12px;             
     margin-bottom: 40px;
 }
 
 
 .back-icon {
-    width: 18px;          
-    height: 18px;
+    width: 28px;          
+    height: auto;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
    
 }
 
@@ -91,7 +92,7 @@ h1 {
 }
 
 .back-link:hover .back-icon {
-    transform: translateX(-4px); /* Pfeil hüpft nach links */
+    transform: translateX(-4px) scale(1.05); /* Pfeil hüpft nach links */
    
 
 .nav-links {

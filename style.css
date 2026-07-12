@@ -94,9 +94,7 @@ h1 {
 
 .back-link:hover .back-icon {
     transform: translateX(-4px); /* Pfeil hüpft nach links */
-    /* Dieser Filter verwandelt das weiße Icon exakt in dein Senfgelb (#dca842) */
-    filter: invert(74%) sepia(26%) saturate(1214%) hue-rotate(345deg) brightness(91%) contrast(87%);
-}
+   
 
 .nav-links {
     margin-top: 20px;

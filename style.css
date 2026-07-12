@@ -100,3 +100,9 @@ h1 {
         padding: 40px 20px;
     }
 }
+.team-galerie {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 Spalten für deine 5 Personen */
+    gap: 20px;
+    padding: 40px;
+}

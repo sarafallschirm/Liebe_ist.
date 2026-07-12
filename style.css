@@ -1,38 +1,100 @@
-body{
-  background-color: #1a2a3a;
-  color: #f7f4eb;
-  font-family: "Montserrat", sans-serif;
-  display:flex;
-  align-items:center;
+/* 1. Grund-Setup für die gesamte Seite */
+body {
+    background-color: #1a2a3a;
+    color: #f7f4eb;
+    font-family: "Futura", "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{
-  color: #dca842;
-  font-size: 4rem;
-  margin-bottom: 5px;
-  text-shadow: 3px 3px 0px #b23b28;
+/* 2. Der Haupt-Container, der die zwei Hälften hält */
+.hero-section {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Nimmt exakt die volle Höhe des Bildschirms ein */
+    overflow: hidden; /* Verhindert, dass die ganze Seite scrollt */
 }
- .teaser-container{
-   max-width: 650px;
-    background-color: rgba(255, 255, 255, 0.03); /* Minimal hellerer Hintergrund */
-    border: 2px solid #dca842;                  /* Das Senfgelb als Rahmen */
-    padding: 30px;
-    margin: 40px auto;
+
+/* 3. LINKE HÄLFTE: Der Filmtitel (Feststehend & zentriert) */
+.title-container {
+    flex: 1; /* Genau 50% Breite */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Zentriert den Titel perfekt auf der Y-Achse (vertikal) */
+    background-color: #1a2a3a;
+    padding: 40px;
+}
+
+h1 {
+    color: #dca842;
+    font-size: 5.5rem; /* Schön groß und dominant */
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px #b23b28;
+    line-height: 1.1;
     text-align: center;
-    line-height: 1.8;
-    border-radius: 4px;
+}
+
+/* 4. RECHTE HÄLFTE: Der Teaser-Text (Scrollbar) */
+.teaser-container {
+    flex: 1; /* Genau 50% Breite */
+    overflow-y: auto; /* Macht NUR diese rechte Seite scrollbar, falls der Text lang ist */
+    padding: 60px; /* Viel Luft zu allen Seiten */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zentriert den Text optional auch vertikal, wenn genug Platz ist */
+    background-color: #1a2a3a; /* Kein Rahmen, gleicher Hintergrund */
 }
 
 .teaser-container h2 {
     color: #f7f4eb;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 1.8rem;
+    line-height: 1.3;
     margin-top: 0;
-    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 .teaser-container p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.9; /* Schön luftiger Zeilenabstand */
+    margin-bottom: 25px;
     opacity: 0.9;
+}
+
+/* Styling für deine Pfade/Links */
+.nav-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #dca842;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.nav-links a:hover {
+    border-bottom-color: #b23b28;
+}
+
+/* 5. Responsive Design für Smartphones (Untereinander statt Nebeneinander) */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+    .title-container {
+        height: 40vh; /* Titel oben nimmt 40% der Höhe ein */
+    }
+    .teaser-container {
+        height: auto;
+        overflow: visible;
+        padding: 40px 20px;
+    }
 }

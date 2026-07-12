@@ -1,4 +1,4 @@
-/* 1. Grund-Setup für die gesamte Seite */
+
 body {
     background-color: #1a2a3a;
     color: #f7f4eb;
@@ -8,7 +8,7 @@ body {
     box-sizing: border-box;
 }
 
-/* 2. Der Haupt-Container, der die zwei Hälften hält */
+
 .hero-section {
     display: flex;
     width: 100%;

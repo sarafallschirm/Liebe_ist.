@@ -206,7 +206,7 @@ h1 {
     opacity: 0.9;
 }
 
-/* 5. RESPONSIVE DESIGN & EXTRA */
+
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
@@ -220,6 +220,20 @@ h1 {
         height: auto;
         overflow: visible;
         padding: 40px 20px;
+    }
+}
+    .cast-card {
+        max-width: 85%;   
+        height: auto !important; 
+        aspect-ratio: 450 / 635; 
+    }
+    
+    
+    .cast-text-content h3 {
+        font-size: 1.2rem;
+    }
+    .cast-text-content p {
+        font-size: 0.85rem;
     }
 }
 

@@ -79,7 +79,7 @@ h1 {
 
 
 .back-icon {
-    width: 500px;          
+    width:400px;          
     height: auto;
     transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
    

@@ -45,6 +45,8 @@ h1 {
     flex-direction: column;
     justify-content: center; /* Zentriert den Text optional auch vertikal, wenn genug Platz ist */
     background-color: #1a2a3a; /* Kein Rahmen, gleicher Hintergrund */
+    max-width: 450px;
+    magrin: 0 auto;
 }
 
 .teaser-container h2 {

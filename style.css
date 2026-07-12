@@ -20,7 +20,8 @@ body {
     border-radius: 0px !important; /* Scharfe Ecken fürs Bild */
 }
 
-/* 2. LAYOUT FÜR DIE SEITE UND DIE KACHELN */
+
+/* 2. LAYOUT FÜR DIE SEITE UND DIE INTERAKTIVEN KACHELN */
 .cast-section {
     width: 90%;
     max-width: 1400px;
@@ -38,32 +39,67 @@ body {
     margin-bottom: 80px;
 }
 
+/* Die Kachel wird zum Ankerpunkt für den schwebenden Text */
 .cast-card {
     width: 100%;
     max-width: 600px;       
-    border-radius: 0px !important; /* Hier korrigiert: Macht die Ecken der Kachel absolut scharf */
-    overflow: visible !important;       
+    border-radius: 0px !important; 
+    overflow: hidden !important; /* Wichtig, damit das Overlay nicht über den Bildrand hinausragt */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
-    text-align: center;      
+    position: relative; /* Erlaubt dem Overlay, sich absolut an dieser Kachel auszurichten */
 }
 
-.cast-info {
-    padding: 30px 20px;     
+/* Das unsichtbare Overlay, das beim Hovern aktiv wird */
+.cast-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 42, 58, 0.85); /* Das dunkelt das Bild mit deinem Dunkelblau ab */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Standardmäßig unsichtbar */
+    transition: opacity 0.4s ease; /* Macht das Einblenden butterweich */
+    padding: 30px;
+    box-sizing: border-box;
 }
 
-.cast-info h3 {
-    color: #dca842;
-    font-size: 1.6rem;
+/* Rahmen-Effekt: Textinhalt bekommt einen eleganten Rahmen */
+.cast-text-content {
+    border: 2px solid #dca842; /* Senfgelber Rahmen im Wes-Anderson-Stil */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* WENN MAN MIT DER MAUS DRÜBER FÄHRT (HOVER) */
+.cast-card:hover .cast-overlay {
+    opacity: 1; /* Macht das Overlay und den Text sichtbar */
+}
+
+/* Texteinstellungen innerhalb des Overlays */
+.cast-text-content h3 {
+    color: #f7f4eb; /* Weißer/Cremefarbener Text auf dunklem Grund */
+    font-size: 1.5rem;
     margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.cast-info p {
-    color: #f7f4eb;
-    font-size: 1rem;
+.cast-text-content p {
+    color: #F8D58D; /* Sanftes Gelb für die Beschreibung */
+    font-size: 0.95rem;
     line-height: 1.6;
-    opacity: 0.9;
+    margin: 0;
 }
-
 /* 3. ÜBERSCHRIFTEN & LINKS (KLAMMERN KORRIGIERT) */
 .page-title {
     color: #dca842;

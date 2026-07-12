@@ -83,7 +83,6 @@ h1 {
 
 /* 2. Die Episoden-Kachel selbst */
 .cast-card {
-    background-color: #2a2a2a; /* Falls du einen Hintergrund hast, sonst anpassen oder weglassen */
     width: 100%;
     max-width: 600px;        /* Bestimmt, wie breit jede Episode maximal sein soll */
     border-radius: 12px;
@@ -92,11 +91,11 @@ h1 {
     text-align: center;      /* Zentriert den Text unter dem Bild */
 }
 
-/* 3. DIE WICHTIGSTE ZEILE: Macht alle Bilder absolut identisch groß */
+
 .cast-card img.episode-img {
-    width: 100% !important;  /* Nutzt die volle Breite der Kachel */
-    height: 350px !important; /* Erzwingt eine absolut identische Höhe für JEDES Bild */
-    object-fit: cover !important; /* Schneidet die Bilder perfekt zu (wie ein Kinofilm-Frame), kein Verzerren! */
+    width: 100% !important; 
+    height: 550px !important; 
+    object-fit: cover !important; 
     display: block;
 }
 

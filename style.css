@@ -71,31 +71,32 @@ h1 {
     text-align: left;
     position: relative;
 }
-/* 1. Die Anordnung auf der Seite: Alle untereinander statt nebeneinander */
+
 .cast-grid {
     display: flex;
-    flex-direction: column; /* Stapelt die Episoden vertikal */
-    align-items: center;     /* Zentriert jede einzelne Kachel perfekt auf der Seite */
-    gap: 60px;              /* Genügend Abstand ZWISCHEN den einzelnen Episoden-Kacheln (übereinander) */
+    flex-direction: column; 
+    align-items: center;     
+    gap: 60px;              
     margin-top: 40px;
     margin-bottom: 80px;
 }
 
-/* 2. Die Episoden-Kachel selbst */
+
 .cast-card {
     width: 100%;
-    max-width: 600px;        /* Bestimmt, wie breit jede Episode maximal sein soll */
+    max-width: 600px;       
     border-radius: 12px;
-    overflow: hidden;        /* Zwingt das Bild, sich an die abgerundeten Ecken der Kachel anzupassen */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ein edler Schatten für mehr Tiefe */
-    text-align: center;      /* Zentriert den Text unter dem Bild */
+    overflow: hidden;       
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+    text-align: center;      
 }
 
 
 .cast-card img.episode-img {
     width: 100% !important; 
-    height: 550px !important; 
+    height: 400px !important; 
     object-fit: cover !important; 
+    border-radius: 0 !important;
     display: block;
 }
 

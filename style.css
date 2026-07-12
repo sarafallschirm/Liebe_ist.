@@ -64,6 +64,39 @@ h1 {
     opacity: 0.9;
 }
 
+/* Der Zurück-Button */
+.back-link {
+    color: #f7f4eb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    transition: opacity 0.3s, color 0.3s;
+    display: inline-flex; 
+    align-items: center;  
+    gap: 8px;             
+    margin-bottom: 40px;
+}
+
+/* Das Styling für das SVG-Bild */
+.back-icon {
+    width: 18px;          
+    height: 18px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s;
+    /* Macht das standardmäßig schwarze SVG weiß/hell, passend zum Text */
+    filter: brightness(0) invert(1); 
+}
+
+/* HOVER EFFEKT */
+.back-link:hover {
+    opacity: 1;
+    color: #dca842;       /* Text wird senfgelb */
+}
+
+.back-link:hover .back-icon {
+    transform: translateX(-4px); /* Pfeil hüpft nach links */
+    /* Dieser Filter verwandelt das weiße Icon exakt in dein Senfgelb (#dca842) */
+    filter: invert(74%) sepia(26%) saturate(1214%) hue-rotate(345deg) brightness(91%) contrast(87%);
+}
 
 .nav-links {
     margin-top: 20px;

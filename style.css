@@ -73,23 +73,24 @@ h1 {
 }
 
 .cast-grid {
-    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(320px,1fr));      
-    gap: 40px;              
+    display: flex;
+    flex-direction: column; /* Bringt die Karten wieder sauber untereinander */
+    align-items: center;    /* Zentriert die Karten auf der Seite */
+    gap: 50px;              /* Der Abstand zwischen den einzelnen Kapiteln */
     margin-top: 40px;
     margin-bottom: 80px;
 }
 
-
 .cast-card {
     width: 100%;
-    max-width: 380px;   
-    margin: 0 auto;
+    max-width: 380px;       /* Deine neue, kompaktere Wunschgröße */
     border-radius: 0px !important; 
     overflow: hidden !important; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
     position: relative; 
-    aspect-ratio: 2/3;
+    
+    /* Erzwingt das klassische Hochkant-Filmplakat-Format */
+    aspect-ratio: 2 / 3; 
 }
 
 

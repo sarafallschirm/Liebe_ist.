@@ -100,9 +100,9 @@ h1 {
     display: block;
 }
 
-/* 4. Der Textbereich unter dem Bild */
+
 .cast-info {
-    padding: 30px 20px;     /* Genügend Abstand (Polster) über, unter und neben dem Text */
+    padding: 30px 20px;     
 }
 
 .cast-info h3 {
@@ -135,8 +135,8 @@ h1 {
     align-items: center;  
     gap: 20px;             
     position: absolute;
-    top: 0;       /* Ganz nach oben an den Rand der Sektion */
-    right: 0;     /* Ganz nach rechts an den Rand der Sektion */
+    top: 0;       
+    right: 0;    
     
  
     margin-bottom: 0;
@@ -144,8 +144,8 @@ h1 {
 
 
 .back-icon {
-    width:50px;          
-    height: auto;
+    width:110px !important;          
+    height: auto!important;
     transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
    
 }

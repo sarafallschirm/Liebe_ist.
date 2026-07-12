@@ -54,11 +54,14 @@ h1 {
 .episode-img {
     width: 100% !important;
     height: 100% !important; 
-    object-fit: contain !important; 
-    border-radius: 0px !important;
+    object-fit: cover !important; 
     display:block;
+    filter: brightness(0.8);
+    transition:filter0.4s ease;
 }
-
+.cast-card:hover .episode-img {
+    filter: brightness(0.4); /* Wird beim Hover dunkler, damit man den Text perfekt lesen kann */
+}
 
 .cast-section {
     width: 90%;
@@ -66,13 +69,13 @@ h1 {
     margin: 60px auto; 
     text-align: left;
     position: relative;
+    padding-top: 40px;
 }
 
 .cast-grid {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;      
-    gap: 60px;              
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px,1fr));      
+    gap: 40px;              
     margin-top: 40px;
     margin-bottom: 80px;
 }
@@ -80,11 +83,13 @@ h1 {
 
 .cast-card {
     width: 100%;
-    max-width: 600px;       
+    max-width: 380px;   
+    margin: 0 auto;
     border-radius: 0px !important; 
     overflow: hidden !important; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
     position: relative; 
+    aspect-ratio: 2/3;
 }
 
 
@@ -144,10 +149,17 @@ h1 {
     font-size: 3.5rem;
     text-transform: uppercase;
     text-shadow: 3px 3px 0px #b23b28;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
-
+.page-subtitle {
+    color: #F8D58D;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 40px; 
+    font-style: italic;
+    opacity: 0.9;
+}
 .back-link {
     color: #f7f4eb;
     text-decoration: none;

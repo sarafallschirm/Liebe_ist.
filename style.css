@@ -146,6 +146,7 @@ h1 {
     text-shadow: 3px 3px 0px #b23b28;
     margin-top: 20px;
     margin-bottom: 10px;
+}
 
 .back-link {
     color: #f7f4eb;
@@ -222,14 +223,11 @@ h1 {
         overflow: visible;
         padding: 40px 20px;
     }
-}
     .cast-card {
         max-width: 85%;   
         height: auto !important; 
         aspect-ratio: 450 / 635; 
     }
-    
-    
     .cast-text-content h3 {
         font-size: 1.2rem;
     }

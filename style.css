@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
 }
 
-/* 1. KONTROLLIERTES BILD- & ICON-STYLING */
+
 .back-icon {
     width: 50px !important; 
     height: auto !important;
@@ -15,13 +15,13 @@ body {
 
 .episode-img {
     width: 100% !important;
-    height: 400px !important; /* Kürzere Höhe für die Kacheln */
-    object-fit: cover !important; 
-    border-radius: 0px !important; /* Scharfe Ecken fürs Bild */
+    height: 100% !important; 
+    object-fit: contain !important; 
+    border-radius: 0px !important;
+    display:block;
 }
 
 
-/* 2. LAYOUT FÜR DIE SEITE UND DIE INTERAKTIVEN KACHELN */
 .cast-section {
     width: 90%;
     max-width: 1400px;
@@ -39,36 +39,36 @@ body {
     margin-bottom: 80px;
 }
 
-/* Die Kachel wird zum Ankerpunkt für den schwebenden Text */
+
 .cast-card {
     width: 100%;
     max-width: 600px;       
     border-radius: 0px !important; 
-    overflow: hidden !important; /* Wichtig, damit das Overlay nicht über den Bildrand hinausragt */
+    overflow: hidden !important; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
-    position: relative; /* Erlaubt dem Overlay, sich absolut an dieser Kachel auszurichten */
+    position: relative; 
 }
 
-/* Das unsichtbare Overlay, das beim Hovern aktiv wird */
+
 .cast-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(26, 42, 58, 0.85); /* Das dunkelt das Bild mit deinem Dunkelblau ab */
+    background-color: rgba(26, 42, 58, 0.85); 
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Standardmäßig unsichtbar */
-    transition: opacity 0.4s ease; /* Macht das Einblenden butterweich */
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
     padding: 30px;
     box-sizing: border-box;
 }
 
-/* Rahmen-Effekt: Textinhalt bekommt einen eleganten Rahmen */
+
 .cast-text-content {
-    border: 2px solid #dca842; /* Senfgelber Rahmen im Wes-Anderson-Stil */
+    border: 2px solid #dca842;
     width: 100%;
     height: 100%;
     display: flex;
@@ -80,14 +80,14 @@ body {
     text-align: center;
 }
 
-/* WENN MAN MIT DER MAUS DRÜBER FÄHRT (HOVER) */
+
 .cast-card:hover .cast-overlay {
-    opacity: 1; /* Macht das Overlay und den Text sichtbar */
+    opacity: 1; 
 }
 
-/* Texteinstellungen innerhalb des Overlays */
+
 .cast-text-content h3 {
-    color: #f7f4eb; /* Weißer/Cremefarbener Text auf dunklem Grund */
+    color: #f7f4eb; 
     font-size: 1.5rem;
     margin-bottom: 12px;
     text-transform: uppercase;
@@ -95,12 +95,12 @@ body {
 }
 
 .cast-text-content p {
-    color: #F8D58D; /* Sanftes Gelb für die Beschreibung */
+    color: #F8D58D;
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
 }
-/* 3. ÜBERSCHRIFTEN & LINKS (KLAMMERN KORRIGIERT) */
+
 .page-title {
     color: #dca842;
     font-size: 3.5rem;
@@ -108,7 +108,6 @@ body {
     text-shadow: 3px 3px 0px #b23b28;
     margin-top: 20px;
     margin-bottom: 10px;
-} /* KORREKTUR: Diese Klammer hatte gefehlt! */
 
 .back-link {
     color: #f7f4eb;
@@ -153,7 +152,7 @@ body {
     border-bottom-color: #b23b28;
 }
 
-/* 4. HERO SECTION & TEXTE (STARTSEITE) */
+
 .hero-section {
     display: flex;
     width: 100%;
@@ -189,7 +188,7 @@ h1 {
     justify-content: center; 
     background-color: #1a2a3a; 
     max-width: 450px;
-    margin: 0 auto; /* Tippfehler korrigiert: 'margin' statt 'magrin' */
+    margin: 0 auto; 
 }
 
 .teaser-container h2 {

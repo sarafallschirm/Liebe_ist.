@@ -71,6 +71,52 @@ h1 {
     text-align: left;
     position: relative;
 }
+/* 1. Die Anordnung auf der Seite: Alle untereinander statt nebeneinander */
+.cast-grid {
+    display: flex;
+    flex-direction: column; /* Stapelt die Episoden vertikal */
+    align-items: center;     /* Zentriert jede einzelne Kachel perfekt auf der Seite */
+    gap: 60px;              /* Genügend Abstand ZWISCHEN den einzelnen Episoden-Kacheln (übereinander) */
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+/* 2. Die Episoden-Kachel selbst */
+.cast-card {
+    background-color: #2a2a2a; /* Falls du einen Hintergrund hast, sonst anpassen oder weglassen */
+    width: 100%;
+    max-width: 600px;        /* Bestimmt, wie breit jede Episode maximal sein soll */
+    border-radius: 12px;
+    overflow: hidden;        /* Zwingt das Bild, sich an die abgerundeten Ecken der Kachel anzupassen */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ein edler Schatten für mehr Tiefe */
+    text-align: center;      /* Zentriert den Text unter dem Bild */
+}
+
+/* 3. DIE WICHTIGSTE ZEILE: Macht alle Bilder absolut identisch groß */
+.cast-card img.episode-img {
+    width: 100% !important;  /* Nutzt die volle Breite der Kachel */
+    height: 350px !important; /* Erzwingt eine absolut identische Höhe für JEDES Bild */
+    object-fit: cover !important; /* Schneidet die Bilder perfekt zu (wie ein Kinofilm-Frame), kein Verzerren! */
+    display: block;
+}
+
+/* 4. Der Textbereich unter dem Bild */
+.cast-info {
+    padding: 30px 20px;     /* Genügend Abstand (Polster) über, unter und neben dem Text */
+}
+
+.cast-info h3 {
+    color: #dca842;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.cast-info p {
+    color: #f7f4eb;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
 .page-title {
     color: #dca842;
     font-size: 3.5rem;

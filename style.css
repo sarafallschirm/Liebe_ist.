@@ -64,9 +64,9 @@ h1 {
     opacity: 0.9;
 }
 
-/* Der Zurück-Button */
+
 .back-link {
-    color: #f7f4eb;
+    
     text-decoration: none;
     font-size: 0.9rem;
     opacity: 0.6;
@@ -77,16 +77,14 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Das Styling für das SVG-Bild */
+
 .back-icon {
     width: 18px;          
     height: 18px;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s;
-    /* Macht das standardmäßig schwarze SVG weiß/hell, passend zum Text */
     filter: brightness(0) invert(1); 
 }
 
-/* HOVER EFFEKT */
+
 .back-link:hover {
     opacity: 1;
     color: #dca842;       /* Text wird senfgelb */

@@ -67,10 +67,17 @@ h1 {
 .cast-section {
     width: 90%;
     max-width: 1400px;
-    margin: 40px auto; /* Erhöht den Abstand nach oben auf 80px, 'auto' zentriert es links/rechts */
-    text-align: center;
+    margin: 60px auto; 
+    text-align: left;
     position: relative;
 }
+.page-title {
+    color: #dca842;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #b23b28;
+    margin-top: 20px;
+    margin-bottom: 10px;
 
 .back-link {
     color: #f7f4eb;

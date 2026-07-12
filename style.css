@@ -131,7 +131,7 @@ body {
 
 .back-link:hover .back-icon {
     transform: translateX(-4px) scale(1.05);
-} /* KORREKTUR: Diese Klammer hatte gefehlt! */
+} 
 
 .nav-links {
     margin-top: 20px;

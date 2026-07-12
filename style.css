@@ -184,14 +184,13 @@ h1 {
     overflow-y: auto; 
     padding: 60px; 
     display: flex;
-    flex-direction: column;
+    align-items:center;
     justify-content: center; 
     background-color: #1a2a3a; 
-    max-width: 450px;
-    margin: 0 auto; 
+    
 }
 
-.teaser-container h2 {
+.teaser-content h2 {
     color: #F8D58D;
     font-size: 1.8rem;
     line-height: 1.3;
@@ -199,7 +198,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-.teaser-container p {
+.teaser-content p {
     font-size: 1.1rem;
     line-height: 1.9; 
     margin-bottom: 25px;

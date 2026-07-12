@@ -67,8 +67,9 @@ h1 {
 .cast-section {
     width: 90%;
     max-width: 1400px;
-    margin: 80px auto; /* Erhöht den Abstand nach oben auf 80px, 'auto' zentriert es links/rechts */
+    margin: 40px auto; /* Erhöht den Abstand nach oben auf 80px, 'auto' zentriert es links/rechts */
     text-align: center;
+    position: relative;
 }
 
 .back-link {
@@ -80,8 +81,12 @@ h1 {
     display: inline-flex; 
     align-items: center;  
     gap: 20px;             
-    padding: 30px 40px; 
-    margin-bottom: 60px;
+    position: absolute;
+    top: 0;       /* Ganz nach oben an den Rand der Sektion */
+    right: 0;     /* Ganz nach rechts an den Rand der Sektion */
+    
+ 
+    margin-bottom: 0;
 }
 
 

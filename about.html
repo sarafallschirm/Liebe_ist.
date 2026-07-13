@@ -3,19 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Besetzung - Liebe ist.</title>
-    
-    <!-- Google Fonts wieder mitnehmen -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-    
-    <!-- Die Verknüpfung zur GLEICHEN CSS-Datei -->
+    <title>Produktion - Liebe ist.</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <!-- Hier kommt bald dein Inhalt für die Unterseite rein -->
+    <div class="production-section">
+        
+        <a href="./index.html" class="back-link">
+            <img src="./images/zurück.svg" alt="Zurück" class="back-icon">
+        </a>
 
+        <!-- Der umschließende Container für die Interaktion -->
+        <div class="logo-trigger-container">
+            
+            <!-- Dein animiertes SVG (id="axis-logo" hinzugefügt) -->
+            <svg id="axis-logo" viewBox="0 0 700 800" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(100, 100)">
+                    <rect x="15" y="0" width="470" height="550" fill="none" stroke="#8A4141" stroke-width="20"/>
+                    <circle cx="250" cy="250" r="100" fill="#8A4141"/>
+                    
+                    <circle cx="250" cy="350" r="60" fill="#ECECEC" opacity="80%" stroke="#8A4141" stroke-width="10">
+                        <!-- id="anim1" hinzugefügt & begin="indefinite" damit es auf das JS wartet -->
+                        <animateTransform id="anim1"
+                            attributeName="transform"
+                            type="rotate"
+                            values="0 250 250; 0 250 250; 180 250 250; 180 250 250; 360 250 250"
+                            keyTimes="0; 0.25; 0.5; 0.75; 1"
+                            dur="4s"
+                            repeatCount="indefinite"
+                            begin="indefinite" />
+                    </circle>
+                    
+                    <circle cx="250" cy="445" r="40" fill="#8A4141">  
+                        <!-- id="anim2" hinzugefügt & begin="indefinite" -->
+                        <animateTransform id="anim2"
+                            attributeName="transform"
+                            type="rotate"
+                            values="360 250 250; 360 250 250; 180 250 250; 180 250 250; 0 250 250"
+                            keyTimes="0; 0.25; 0.5; 0.75; 1"
+                            dur="4s"
+                            repeatCount="indefinite"
+                            begin="indefinite" />
+                    </circle>
+                </g>
+            </svg>
+
+            <!-- Die klappbare Infobox direkt unter dem Logo -->
+            <div class="production-info-box">
+                <h2>Axis Films</h2>
+                <h3 class="tagline">Grenzen überspringen</h3>
+                <p class="production-text">
+                    Die Filmproduktionsfirma „Axis Films“ hat sich den Achsensprung als Metapher für die Überwindung von Herausforderungen in der Produktion genommen. Es ist alles möglich, man muss manchmal nur die Perspektive wechseln.
+                </p>
+            </div>
+
+        </div> <!-- Ende logo-trigger-container -->
+    </div> <!-- Ende production-section -->
+
+    <!-- JAVASCRIPT FÜR DIE STEUERUNG -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const triggerContainer = document.querySelector('.logo-trigger-container');
+            const infoBox = document.querySelector('.production-text');
+            
+            // Die beiden SVG-Animationen greifen
+            const anim1 = document.getElementById('anim1');
+            const anim2 = document.getElementById('anim2');
+
+            // Wenn man über das Logo/den Bereich hovert
+            triggerContainer.addEventListener('mouseenter', () => {
+                // 1. Text aufklappen
+                if (infoBox) infoBox.classList.add('is-expanded');
+                
+                // 2. SVG-Animation starten
+                if (anim1 && anim2) {
+                    anim1.beginElement();
+                    anim2.beginElement();
+                }
+            });
+
+            // Wenn die Maus den Bereich verlässt
+            triggerContainer.addEventListener('mouseleave', () => {
+                // 1. Text wieder einklappen
+                if (infoBox) infoBox.classList.remove('is-expanded');
+                
+                // 2. SVG-Animation stoppen
+                if (anim1 && anim2) {
+                    anim1.endElement();
+                    anim2.endElement();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

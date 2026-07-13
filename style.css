@@ -25,7 +25,6 @@ h1 {
     align-items:center;
     justify-content: center; 
     background-color: #1a2a3a; 
-    
 }
 
 .teaser-content h2 {
@@ -43,9 +42,6 @@ h1 {
     opacity: 0.9;
 }
 
-
-
-
 .back-icon {
     width: 50px !important; 
     height: auto !important;
@@ -57,8 +53,9 @@ h1 {
     object-fit: cover !important; 
     display:block;
     filter: brightness(0.8);
-    transition:filter0.4s ease;
+    transition: filter 0.4s ease;
 }
+
 .cast-card:hover .episode-img {
     filter: brightness(0.4); /* Wird beim Hover dunkler, damit man den Text perfekt lesen kann */
 }
@@ -88,11 +85,9 @@ h1 {
     overflow: hidden !important; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
     position: relative; 
-    
     /* Erzwingt das klassische Hochkant-Filmplakat-Format */
     aspect-ratio: 2 / 3; 
 }
-
 
 .cast-overlay {
     position: absolute;
@@ -110,7 +105,6 @@ h1 {
     box-sizing: border-box;
 }
 
-
 .cast-text-content {
     border: 2px solid #dca842;
     width: 100%;
@@ -124,11 +118,12 @@ h1 {
     text-align: center;
 }
 
-
+/* KORRIGIERT: Schließende Klammer hinzugefügt! */
 .cast-card:hover .cast-overlay {
     opacity: 1; 
-
 }
+
+/* Container für die Produktionsseite */
 .production-section {
     width: 90%;
     max-width: 800px;
@@ -138,12 +133,12 @@ h1 {
     padding-top: 40px;
 }
 
-
+/* Der umschließende Container steuert jetzt die maximale Breite des Logos */
 .logo-trigger-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 250px; /* 💡 HIER: Ändere diese Zahl, um das Logo noch kleiner/größer zu machen */
+    max-width: 250px; 
     margin: 0 auto;
     cursor: pointer;
 }
@@ -154,11 +149,12 @@ h1 {
     transition: transform 0.3s ease;
 }
 
+/* Minimaler Skalierungseffekt beim Hovern */
 .logo-trigger-container:hover #axis-logo {
     transform: scale(1.03);
 }
 
-
+/* Styling für die Infobox */
 .production-info-box {
     width: 100%;
     margin-top: 15px;
@@ -179,26 +175,25 @@ h1 {
     margin: 0 0 10px 0;
 }
 
-
+/* Die Basis-Klasse für den eingeklappten Text */
 .production-text {
     color: #f7f4eb;
     font-size: 0.95rem;
     line-height: 1.6;
-    max-height: 0;        
-    opacity: 0;          
+    max-height: 0;        /* Standardmäßig unsichtbar */
+    opacity: 0;           /* Standardmäßig unsichtbar */
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
     margin: 0;
     text-align: center;
 }
 
-
+/* Diese Klasse wird vom JavaScript beim Hovern angehängt */
 .production-text.is-expanded {
-    max-height: 250px;   
-    opacity: 1;          
+    max-height: 250px;    /* Klappt den Text nach unten auf */
+    opacity: 1;           /* Macht ihn sichtbar */
     margin-top: 15px;
 }
-
 
 .cast-text-content h3 {
     color: #f7f4eb; 
@@ -215,14 +210,6 @@ h1 {
     margin: 0;
 }
 
-.page-title {
-    color: #dca842;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    text-shadow: 3px 3px 0px #b23b28;
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
 .page-title {
     color: #dca842;
     font-size: 3.5rem;
@@ -271,7 +258,6 @@ h1 {
     border-bottom-color: #b23b28;
 }
 
-
 .hero-section {
     display: flex;
     width: 100%;
@@ -287,7 +273,6 @@ h1 {
     background-color: #1a2a3a;
     padding: 40px;
 }
-
 
 @media (max-width: 768px) {
     .hero-section {
@@ -332,7 +317,6 @@ h1 {
     margin-bottom: 5px;
 }
 
-
 .collapsible-text {
     max-height: 0;
     opacity: 0;
@@ -341,7 +325,6 @@ h1 {
     margin-top: 0;
     margin-bottom: 0 !important;
 }
-
 
 .collapsible-text.is-expanded {
     max-height: 200px; 

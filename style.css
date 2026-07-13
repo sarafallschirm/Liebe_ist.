@@ -331,3 +331,9 @@ h1 {
     opacity: 1;
     margin-top: 15px;
 }
+/* Positioniert den Zurück-Link oben links in der Ecke */
+.production-section .back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}

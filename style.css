@@ -128,7 +128,7 @@ h1 {
 .cast-card:hover .cast-overlay {
     opacity: 1; 
 
-  /* Container für die Produktionsseite */
+}
 .production-section {
     width: 90%;
     max-width: 800px;
@@ -138,7 +138,7 @@ h1 {
     padding-top: 40px;
 }
 
-/* Der umschließende Container steuert jetzt die maximale Breite des Logos */
+
 .logo-trigger-container {
     display: flex;
     flex-direction: column;
@@ -154,12 +154,11 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-/* Minimaler Skalierungseffekt beim Hovern */
 .logo-trigger-container:hover #axis-logo {
     transform: scale(1.03);
 }
 
-/* Styling für die Infobox */
+
 .production-info-box {
     width: 100%;
     margin-top: 15px;
@@ -180,23 +179,23 @@ h1 {
     margin: 0 0 10px 0;
 }
 
-/* 💡 WICHTIG: Die Basis-Klasse für den eingeklappten Text */
+
 .production-text {
     color: #f7f4eb;
     font-size: 0.95rem;
     line-height: 1.6;
-    max-height: 0;        /* Standardmäßig unsichtbar */
-    opacity: 0;           /* Standardmäßig unsichtbar */
+    max-height: 0;        
+    opacity: 0;          
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
     margin: 0;
     text-align: center;
 }
 
-/* 💡 Diese Klasse wird vom JavaScript beim Hovern angehängt */
+
 .production-text.is-expanded {
-    max-height: 250px;    /* Klappt den Text nach unten auf */
-    opacity: 1;           /* Macht ihn sichtbar */
+    max-height: 250px;   
+    opacity: 1;          
     margin-top: 15px;
 }
 

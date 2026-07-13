@@ -153,27 +153,24 @@ h1 {
     margin-top: 0px;
     margin-bottom: 10px;
 }
+.page-title {
+    color: #dca842;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #b23b28;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center; /* HIER ZENTRIEREN */
+}
+
 .page-subtitle {
     color: #F8D58D;
     font-size: 1.4rem;
     margin-top: 0;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
     font-style: italic;
     opacity: 0.9;
-}
-.back-link {
-    color: #f7f4eb;
-    text-decoration: none;
-    font-size: 1.1rem;
-    opacity: 0.7;
-    transition: opacity 0.3s, color 0.3s;
-    display: inline-flex; 
-    align-items: center;  
-    gap: 20px;             
-    position: absolute;
-    top: 0;       
-    right: 0;    
-    margin-bottom: 0;
+    text-align: center; /* HIER ZENTRIEREN */
 }
 
 .back-link:hover {

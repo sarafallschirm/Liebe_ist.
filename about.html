@@ -13,23 +13,19 @@
 
     <div class="production-section">
         
-        <!-- KORRIGIERT: Beide Klassen jetzt exakt wie auf der Besetzungsseite -->
         <a href="./index.html" class="back-link">
             <img src="./images/zurück.svg" alt="Zurück" class="back-icon">
         </a>
 
-        <!-- Der umschließende Container für die Interaktion -->
         <div class="logo-trigger-container">
-...
+
             
-            <!-- Dein animiertes SVG (id="axis-logo" hinzugefügt) -->
             <svg id="axis-logo" viewBox="0 0 700 800" xmlns="http://www.w3.org/2000/svg">
                 <g transform="translate(100, 100)">
                     <rect x="15" y="0" width="470" height="550" fill="none" stroke="#8A4141" stroke-width="20"/>
                     <circle cx="250" cy="250" r="100" fill="#8A4141"/>
                     
                     <circle cx="250" cy="350" r="60" fill="#ECECEC" opacity="80%" stroke="#8A4141" stroke-width="10">
-                        <!-- id="anim1" hinzugefügt & begin="indefinite" damit es auf das JS wartet -->
                         <animateTransform id="anim1"
                             attributeName="transform"
                             type="rotate"
@@ -41,7 +37,6 @@
                     </circle>
                     
                     <circle cx="250" cy="445" r="40" fill="#8A4141">  
-                        <!-- id="anim2" hinzugefügt & begin="indefinite" -->
                         <animateTransform id="anim2"
                             attributeName="transform"
                             type="rotate"
@@ -54,7 +49,7 @@
                 </g>
             </svg>
 
-            <!-- Die klappbare Infobox direkt unter dem Logo -->
+
             <div class="production-info-box">
                 <h2>Axis Films</h2>
                 <h3 class="tagline">Grenzen überspringen</h3>
@@ -63,37 +58,29 @@
                 </p>
             </div>
 
-        </div> <!-- Ende logo-trigger-container -->
-    </div> <!-- Ende production-section -->
+        </div> 
+    </div> 
 
-    <!-- JAVASCRIPT FÜR DIE STEUERUNG -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const triggerContainer = document.querySelector('.logo-trigger-container');
             const infoBox = document.querySelector('.production-text');
             
-            // Die beiden SVG-Animationen greifen
             const anim1 = document.getElementById('anim1');
             const anim2 = document.getElementById('anim2');
 
-            // Wenn man über das Logo/den Bereich hovert
             triggerContainer.addEventListener('mouseenter', () => {
-                // 1. Text aufklappen
                 if (infoBox) infoBox.classList.add('is-expanded');
                 
-                // 2. SVG-Animation starten
                 if (anim1 && anim2) {
                     anim1.beginElement();
                     anim2.beginElement();
                 }
             });
 
-            // Wenn die Maus den Bereich verlässt
             triggerContainer.addEventListener('mouseleave', () => {
-                // 1. Text wieder einklappen
                 if (infoBox) infoBox.classList.remove('is-expanded');
                 
-                // 2. SVG-Animation stoppen
                 if (anim1 && anim2) {
                     anim1.endElement();
                     anim2.endElement();

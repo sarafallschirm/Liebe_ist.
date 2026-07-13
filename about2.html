@@ -23,7 +23,6 @@
         <!-- Start des Rasters -->
         <div class="cast-grid">
             
-            <!-- EPISODE 1 -->
             <div class="cast-card">
                 <img src="./images/episode1.jpg" alt="Episode 1" class="episode-img">
                 <div class="cast-overlay">
@@ -35,7 +34,6 @@
                 </div>
             </div>
           
-            <!-- EPISODE 2 -->
             <div class="cast-card">
                 <img src="./images/episode2.jpg" alt="Episode 2" class="episode-img">
                 <div class="cast-overlay">
@@ -47,7 +45,6 @@
                 </div>
             </div>
 
-            <!-- EPISODE 3 -->
             <div class="cast-card">
                 <img src="./images/episode3.jpg" alt="Episode 3" class="episode-img">
                 <div class="cast-overlay">
@@ -59,7 +56,6 @@
                 </div>
             </div>
 
-            <!-- EPISODE 4 -->
             <div class="cast-card">
                 <img src="./images/episode4.jpg" alt="Episode 4" class="episode-img">     
                 <div class="cast-overlay">
@@ -71,7 +67,7 @@
                 </div>
             </div>
 
-            <!-- EPISODE 5 -->
+
             <div class="cast-card">
                 <img src="./images/episode5.jpeg" alt="Episode 5" class="episode-img">     
                 <div class="cast-overlay">
@@ -83,9 +79,8 @@
                 </div>
             </div>
 
-        </div> <!-- Ende des Rasters (cast-grid) -->
-    </div> <!-- Ende des Hauptbereichs (cast-section) -->
-
+        </div>
+    </div> 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const cards = document.querySelectorAll('.cast-card');
@@ -94,13 +89,13 @@
             const overlay = card.querySelector('.cast-overlay');
             const textBlock = card.querySelector('.collapsible-text');
 
-            // Beim Hovern (Reinfahren)
+            
             card.addEventListener('mouseenter', () => {
                 if (overlay) overlay.classList.add('is-visible');
                 if (textBlock) textBlock.classList.add('is-expanded');
             });
 
-            // Beim Verlassen (Rausfahren)
+            
             card.addEventListener('mouseleave', () => {
                 if (overlay) overlay.classList.remove('is-visible');
                 if (textBlock) textBlock.classList.remove('is-expanded');

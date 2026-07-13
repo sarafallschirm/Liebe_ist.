@@ -333,12 +333,12 @@ h1 {
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
     margin-top: 0;
-    margin-bottom: 0 !important; /* Verhindert Layout-Sprünge */
+    margin-bottom: 0 !important;
 }
 
 
 .collapsible-text.is-expanded {
-    max-height: 200px; /* Groß genug für den Text */
+    max-height: 200px; 
     opacity: 1;
     margin-top: 15px;
 }
